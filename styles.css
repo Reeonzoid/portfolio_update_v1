@@ -78,7 +78,7 @@ header .profile-image:hover {
   transform: scale(1.2) rotate(-5deg);
 }
 .tag {
-  background-color: #efefef;
+  background-color: rgba(239, 239, 239, 0.75);
   color: black;
   padding: 10px;
   border-radius: 5px;
@@ -86,7 +86,7 @@ header .profile-image:hover {
   margin: 10px auto;
 }
 .location {
-  background-color: #222;
+  background-color: rgba(34, 34, 34, 0.75);
   color: yellow;
 }
 .card {
@@ -178,6 +178,7 @@ a.social:hover {
       -ms-flex-pack: distribute;
       justify-content: space-around;
       margin: 0 auto;
+      flex-wrap: wrap;
   }
 
   header {
@@ -223,18 +224,19 @@ a.social:hover {
   flex-flow: row wrap;
   margin: 54px auto 0;
   max-width: 1200px;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .portfolio-card {
   display: flex;
   flex-flow: column nowrap;
   width: 450px;
+  max-height: 600px;
   padding: 25px;
   margin: 10px;
   background-color: lightsteelblue;
   border-radius: 6px;
-  justify-content: space-evenly;
+  justify-content: space-around;
   border-bottom: 3px solid darkgrey;
   transition: 0.5s;
 }
@@ -246,6 +248,7 @@ a.social:hover {
 .image-portfolio {
   width: 100%;
   height: auto;
+  max-height: 400px; /*fix for IE 11 since height auto does not seem to work*/
   border: 1px solid white;
   box-shadow: 2px 3px 9px 1px darkslategray;
 }
