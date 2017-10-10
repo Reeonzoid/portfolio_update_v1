@@ -1,8 +1,8 @@
 /* Global Layout Set-up */
-* { 
+* {
   box-sizing: border-box;
 }
-  
+
 body {
   margin: 0;
   padding: 0;
@@ -24,12 +24,13 @@ a:hover {
 /* Section Styles */
 
 .main-nav {
-  width: 100%;
-  background: black;
-  min-height: 30px;
-  padding: 10px;
-  position: fixed;
-  text-align: center;
+    width: 100%;
+    background: black;
+    min-height: 30px;
+    padding: 10px;
+    position: fixed;
+    text-align: center;
+    top: 0;
 }
 .nav {
   display: flex;
@@ -69,12 +70,12 @@ header .profile-image {
   margin-top: 50px;
   width: 150px;
   height: 150px;
-  border-radius: 50%;
-  border: 3px solid white;
+  border-radius: 25%;
+  border: 2px dashed black;
   transition: all .5s;
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.2) rotate(-5deg);
 }
 .tag {
   background-color: #efefef;
@@ -83,7 +84,7 @@ header .profile-image:hover {
   border-radius: 5px;
   display: table;
   margin: 10px auto;
-} 
+}
 .location {
   background-color: #222;
   color: yellow;
@@ -110,14 +111,14 @@ ul.skills {
 .skills li {
   border-radius: 6px;
   display: inline-block;
-  background: #ff9904;
-  color: white;
+  background: hotpink;
+  color: black;
   padding: 5px 10px;
   margin: 2px;
 }
 
 .skills li:nth-child(odd) {
-  background: #0399ff;
+  background: greenyellow;
 }
 
 footer {
@@ -169,10 +170,10 @@ a.social:hover {
 
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
-  
+
   .flex {
       display: -ms-flexbox;      /* TWEENER - IE 10 */
-      display: flex; 
+      display: flex;
       max-width: 1200px;
       -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -207,12 +208,44 @@ a.social:hover {
 
 .background-picture {
   display: block;
-  border-radius: 50%;
+  border-radius: 25%;
   border: 2px solid black;
   margin: auto;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .background-picture:hover {
-  transform: scale(1.2);
+  transform: scale(1.2) rotate(-5deg);
+}
+
+.portfolio{
+  display: flex;
+  flex-flow: row wrap;
+  margin: 54px auto 0;
+  max-width: 1200px;
+  justify-content: space-evenly;
+}
+
+.portfolio-card {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 450px;
+  padding: 25px;
+  margin: 10px;
+  background-color: lightsteelblue;
+  border-radius: 6px;
+  justify-content: space-evenly;
+  border-bottom: 3px solid darkgrey;
+  transition: 0.5s;
+}
+
+.portfolio-card:hover {
+  border-bottom: 3px solid lightpink;
+}
+
+.image-portfolio {
+  width: 100%;
+  height: auto;
+  border: 1px solid white;
+  box-shadow: 2px 3px 9px 1px darkslategray;
 }
