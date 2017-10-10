@@ -57,7 +57,7 @@ a:hover {
 
 header {
   text-align: center;
-  background: url('images/Marmaris.jpg') no-repeat top center ;
+  background: url('images/beach.jpg') no-repeat top center ;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
@@ -205,3 +205,14 @@ a.social:hover {
 
 }
 
+.background-picture {
+  display: block;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin: auto;
+  transition: 1s;
+}
+
+.background-picture:hover {
+  transform: scale(1.2);
+}
